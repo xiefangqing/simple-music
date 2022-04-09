@@ -1,0 +1,22 @@
+function formatCount(count) {
+  count = parseInt(count)
+  if (count > 100000000) {
+    return (count / 100000000).toFixed(1) + '亿'
+  } else if (count > 10000) {
+    return (count / 10000).toFixed(1) + '万'
+  } else {
+    return count + ''
+  }
+}
+
+function formatDuration(duration) {
+  duration = parseInt(duration) / 1000
+  var minute = Math.floor(duration / 60)
+  var second = Math.floor(duration) % 60
+  return (minute + ':' + second).replace(getRegExp('\b\d\b', 'g'), '0$&')
+}
+
+module.exports = {
+  formatCount: formatCount,
+  formatDuration: formatDuration
+}
