@@ -1,1 +1,4 @@
-视频详情页
+<video src="{{mvUrlData.url}}" autoplay></video>
+<view>
+  <view wx:for="{{100}}" wx:key="*this">{{item}}</view>
+</view>
