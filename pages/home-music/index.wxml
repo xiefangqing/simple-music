@@ -5,3 +5,20 @@
   background="#fafafa"
   bind:click-input="gotoSearch"
 />
+<swiper
+  indicator-dots
+  indicator-active-color="red"
+  autoplay
+  circular
+  duration="1000"
+  style="height: {{swiperHeight}}px"
+>
+  <swiper-item wx:for="{{banners}}" wx:key="bannerId">
+    <image
+      src="{{item.pic}}" 
+      mode="widthFix" 
+      bind:load="swiperImageLoaded"
+      class="swiper-image"
+    />
+  </swiper-item>
+</swiper>

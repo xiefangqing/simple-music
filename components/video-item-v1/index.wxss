@@ -6,7 +6,7 @@
   position: relative;
 }
 
-.cover > image {
+.cover-image {
   display: block;
   width: 100%;
 }
@@ -21,7 +21,7 @@
   background: rgba(0, 0, 0, 0.4);
 }
 
-.cover-footer > view {
+.count, .duration {
   color: white;
 }
 

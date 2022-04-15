@@ -1,4 +1,7 @@
-/* pages/home/index.wxss */
 .van-search__content {
   background-color: #fff !important;
+}
+
+.swiper-image {
+  width: 100%;
 }
