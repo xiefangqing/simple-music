@@ -22,3 +22,6 @@
     />
   </swiper-item>
 </swiper>
+<view class="recommend-song">
+  <header title="推荐歌曲" rightText="更多"/>
+</view>
