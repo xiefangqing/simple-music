@@ -1,0 +1,19 @@
+.menu-list {
+  white-space: nowrap;
+  position: relative;
+  left: -20rpx;
+  width: 100vw;  /* 等同于 screenWidth  */
+}
+
+.menu-item {
+  display: inline-flex;
+  width: 200rpx;
+  height: 200rpx;
+  background-color: red;
+  margin-left: 20rpx;
+  vertical-align: top;  /* 解决可能的不对齐问题 */
+}
+
+.menu-item:last-of-type {
+  margin-right: 20rpx;
+}

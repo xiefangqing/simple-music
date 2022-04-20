@@ -1,0 +1,8 @@
+<view>
+  <header title="热门歌单" rightText="更多"/>
+  <scroll-view scroll-x class="menu-list">
+    <block wx:for="{{6}}" wx:key="*this">
+      <view class="menu-item">{{item}}</view>
+    </block>
+  </scroll-view>
+</view>

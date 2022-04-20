@@ -2,16 +2,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 88rpx;
+  padding: 28rpx 0;
 }
 
 .header-title {
-  font-size: 36rpx;
+  font-size: 40rpx;
   font-weight: 600;
 }
 
 .header-right {
-  font-size: 28rpx;
+  font-size: 32rpx;
 }
 
 .slot:empty + .default {
@@ -25,6 +25,6 @@
 }
 
 .icon {
-  width: 50rpx;
-  height: 50rpx;
+  width: 60rpx;
+  height: 60rpx;
 }
