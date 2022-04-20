@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "van-search": "@vant/weapp/search/index",
-    "header": "/components/header/index"
+    "van-search": "@vant/weapp/search",
+    "header": "/components/header",
+    "song-item-v1": "/components/song-item-v1" 
   }
 }

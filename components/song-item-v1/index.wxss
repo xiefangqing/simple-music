@@ -1,0 +1,30 @@
+.item {
+  display: flex;
+  align-items: center;
+  margin: 20rpx 10rpx;
+}
+
+.image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 8rpx;
+  margin-right: 16rpx;
+}
+
+.content {
+  flex: 1;
+}
+
+.name {
+  font-size: 36rpx;
+}
+
+.info {
+  font-size: 28rpx;
+  color: #888;
+}
+
+.icon {
+  width: 50rpx;
+  height: 50rpx;
+}

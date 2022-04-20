@@ -5,3 +5,10 @@ export function getBanner() {
     type: 1
   })
 }
+
+export function getPlaylistDetail() {
+  return request.get('/playlist/detail', {
+    // 热歌榜（/toplist接口能看到榜单对应的id）
+    id: 3778678
+  })
+}

@@ -24,4 +24,9 @@
 </swiper>
 <view class="recommend-song">
   <header title="推荐歌曲" rightText="更多"/>
+  <view class="">
+    <block wx:for="{{recommendsongs}}" wx:key="id">
+      <song-item-v1 item="{{item}}"/>
+    </block>
+  </view>
 </view>

@@ -1,0 +1,8 @@
+<view class="item">
+  <image class="image" src="{{item.al.picUrl}}"></image>
+  <view class="content">
+    <text class="name">{{item.name}}</text>
+    <view class="info">{{authorName}} · {{item.al.name}}</view>
+  </view>
+  <image class="icon" src="/assets/images/icons/arrow-right.png"></image>
+</view>
