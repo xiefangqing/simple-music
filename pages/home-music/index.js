@@ -1,4 +1,4 @@
-import { getBanner, getPlaylistDetail } from '../../service/api/music'
+import { getBanner, getPlaylistDetail, getTopPlaylist } from '../../service/api/music'
 import { getComponentRect, throttle } from '../../utils/index'
 
 const throttleGetComponentRect = throttle(getComponentRect, 1000)
@@ -7,8 +7,9 @@ Page({
   data: {
     banners: [],
     swiperHeight: 0,
-    recommendsongs: [],
-    hotSongList: {}
+    recommendSongs: [],
+    allSongs: {},
+    hotSongMenu: []
   },
   onLoad(options) {
     this.getPageData()
@@ -23,11 +24,14 @@ Page({
       this.setData({ banners: res.banners })
     })
     getPlaylistDetail().then(res => {
-      const hotSongList = res.playlist
+      const allSongs = res.playlist
       this.setData({
-        hotSongList,
-        recommendsongs: hotSongList.tracks.slice(0, 6) 
+        allSongs,
+        recommendSongs: allSongs.tracks.slice(0, 6) 
       })
+    })
+    getTopPlaylist().then(res => {
+      this.setData({ hotSongMenu: res.playlists })
     })
   },
   // 当图片载入完毕时触发

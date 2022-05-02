@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "header": "/components/header"
+    "header": "/components/header",
+    "song-menu-item": "/components/song-menu-item"
   }
 }

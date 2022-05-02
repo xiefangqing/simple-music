@@ -12,3 +12,9 @@ export function getPlaylistDetail() {
     id: 3778678
   })
 }
+
+export function getTopPlaylist(limit = 6) {
+  return request.get('/top/playlist', {
+    limit
+  })
+}
