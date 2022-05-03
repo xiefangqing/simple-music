@@ -24,14 +24,27 @@
     />
   </swiper-item>
 </swiper>
-<!--推荐歌曲 -->
-<view class="recommend-song">
-  <header title="推荐歌曲" rightText="更多"/>
+<!-- 推荐歌曲 -->
+<view class="recommend-song" wx:if="{{recommendSong.length}}">
+  <header title="推荐歌曲"/>
   <view>
-    <block wx:for="{{recommendSongs}}" wx:key="id">
+    <block wx:for="{{recommendSong}}" wx:key="id">
       <song-item-v1 item="{{item}}"/>
     </block>
   </view>
 </view>
 <!-- 热门歌单 -->
-<song-menu title="热门歌单" songMenu="{{hotSongMenu}}"/>
+<song-menu 
+  wx:if="{{hotSongMenu.length}}" 
+  title="热门歌单" 
+  songMenu="{{hotSongMenu}}"
+/>
+<!-- 巅峰榜 -->
+<view class="ranking" wx:if="{{showRanking}}">
+  <header title="巅峰榜" showRight="{{false}}"/>
+  <view class="ranking-list">
+    <ranking-item item="{{newRankingSlice}}"/>
+    <ranking-item item="{{soarRankingSlice}}"/>
+    <ranking-item item="{{originalRankingSlice}}"/>
+  </view>
+</view>

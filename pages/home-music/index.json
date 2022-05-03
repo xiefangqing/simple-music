@@ -3,6 +3,7 @@
     "van-search": "@vant/weapp/search",
     "header": "/components/header",
     "song-item-v1": "/components/song-item-v1",
-    "song-menu": "/components/song-menu"
+    "song-menu": "/components/song-menu",
+    "ranking-item": "/components/ranking-item"
   }
 }

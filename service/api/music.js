@@ -6,10 +6,10 @@ export function getBanner() {
   })
 }
 
-export function getPlaylistDetail() {
+// 可以从 /toplist 接口查到榜单对应id
+export function getPlaylistDetail(id) {
   return request.get('/playlist/detail', {
-    // 热歌榜（/toplist接口能看到榜单对应的id）
-    id: 3778678
+    id
   })
 }
 

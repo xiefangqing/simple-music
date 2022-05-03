@@ -1,5 +1,5 @@
-const BASE_URL = 'http://localhost:3000'
-// const BASE_URL = 'http://192.168.3.102:3000'
+// const BASE_URL = 'http://localhost:3000'
+const BASE_URL = 'http://192.168.4.102:3000'
 
 class Request {
 

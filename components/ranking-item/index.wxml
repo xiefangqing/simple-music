@@ -1,0 +1,9 @@
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+<view class="item">
+  <view class="left">
+    <block wx:for="{{item.tracks}}" wx:key="id">
+      <view class="content">{{index + 1}}. {{item.name}} - {{format.expandArray(item.ar)}}</view>
+    </block>
+  </view>
+  <image class="right" src="{{item.coverImgUrl}}" mode="widthFix"></image>
+</view>

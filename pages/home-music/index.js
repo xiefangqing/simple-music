@@ -7,9 +7,16 @@ Page({
   data: {
     banners: [],
     swiperHeight: 0,
-    recommendSongs: [],
-    allSongs: {},
-    hotSongMenu: []
+    recommendSong: [],
+    hotSongMenu: [],
+    hotRanking: {},
+    newRanking: {},
+    soarRanking: {},
+    originalRanking: {},
+    newRankingSlice: {},
+    soarRankingSlice: {},
+    originalRankingSlice: {},
+    showRanking: false
   },
   onLoad(options) {
     this.getPageData()
@@ -23,15 +30,31 @@ Page({
     getBanner().then(res => {
       this.setData({ banners: res.banners })
     })
-    getPlaylistDetail().then(res => {
-      const allSongs = res.playlist
-      this.setData({
-        allSongs,
-        recommendSongs: allSongs.tracks.slice(0, 6) 
-      })
-    })
     getTopPlaylist().then(res => {
       this.setData({ hotSongMenu: res.playlists })
+    })
+    // 热歌榜：3778678 新歌榜：3779629 飙升榜：19723756 原创榜：2884035
+    const rankingList = [
+      { id: 3778678, key: 'hotRanking', slice: 'recommendSong' },
+      { id: 3779629, key: 'newRanking', slice2: 'newRankingSlice' },
+      { id: 19723756, key: 'soarRanking', slice2: 'soarRankingSlice' },
+      { id: 2884035, key: 'originalRanking', slice2: 'originalRankingSlice' }
+    ]
+    let count = 0
+    rankingList.forEach(r => {
+      getPlaylistDetail(r.id).then(res => {
+        const data = res.playlist
+        count++
+        this.setData({ 
+          [r.key]: data,
+          [r.slice]: data.tracks.slice(0, 6),
+          [r.slice2]: {
+            coverImgUrl: data.coverImgUrl,
+            tracks: data.tracks.slice(0, 3)
+          },
+          showRanking: count === rankingList.length
+        })
+      })
     })
   },
   // 当图片载入完毕时触发

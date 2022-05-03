@@ -16,7 +16,16 @@ function formatDuration(duration) {
   return (minute + ':' + second).replace(getRegExp('\b\d\b', 'g'), '0$&')
 }
 
+function expandArray(arr) {
+  var arr2 = []
+  for (var i = 0; i < arr.length; i++) {
+    arr2.push(arr[i].name)
+  }
+  return arr2.join(', ')
+}
+
 module.exports = {
   formatCount: formatCount,
-  formatDuration: formatDuration
+  formatDuration: formatDuration,
+  expandArray: expandArray
 }

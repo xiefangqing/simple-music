@@ -14,8 +14,8 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, .4);
   color: white;
-  padding: 8rpx;
   font-size: 30rpx;
+  padding: 6rpx 8rpx;
 }
 .bottom {
   white-space: normal;

@@ -4,7 +4,10 @@ Component({
       type: String,
       value: '默认标题'
     },
-    rightText: String,
+    rightText: {
+      type: String,
+      value: '更多'
+    },
     showRight: {
       type: Boolean,
       value: true
