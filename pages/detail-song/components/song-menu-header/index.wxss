@@ -1,0 +1,77 @@
+.header {
+  height: 400rpx;
+  /* 占满屏幕宽度 */
+  width: 100vw;
+  position: relative;
+  left: -20rpx;
+}
+.bd-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .4);
+  backdrop-filter: blur(4px);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.top {
+  display: flex;
+  align-items: center;
+  padding: 40rpx 40rpx 0;
+}
+.cover {
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 40rpx;
+  border-radius: 20rpx;
+  flex-shrink: 0;
+}
+.info {
+  overflow: hidden;
+}
+.author {
+  display: flex;
+  align-items: center;
+  margin: 20rpx 0;
+}
+.avatar {
+  display: block;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.nickname {
+  font-size: 32rpx;
+}
+.label {
+  font-size: 28rpx;
+  display: flex;
+}
+.label .text {
+  margin-right: 20rpx;
+  color: black;
+  background-color: white;
+  padding: 6rpx 12rpx;
+  border-radius: 9999px;
+}
+.bottom, .fav, .share {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.bottom .icon {
+  display: block;
+  width: 50rpx;
+  margin-right: 20rpx;
+}

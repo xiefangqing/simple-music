@@ -1,0 +1,19 @@
+<block wx:if="{{songList.tracks.length}}">
+  <header
+    wx:if="{{type === 'rank'}}"
+    title="{{songList.name}}"
+    showRight="{{false}}"
+  />
+  <song-menu-header
+    wx:elif="{{type === 'menu'}}"
+    item="{{songList}}"
+  />
+  <view class="song-list">
+    <song-item-v2 
+      wx:for="{{songList.tracks}}" 
+      wx:key="id" 
+      item="{{item}}" 
+      index="{{index + 1}}"
+    />
+  </view>
+</block>

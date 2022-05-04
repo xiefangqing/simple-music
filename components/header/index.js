@@ -14,5 +14,9 @@ Component({
     }
   },
   data: {},
-  methods: {}
+  methods: {
+    handleClickRight() {
+      this.triggerEvent('clickRight')
+    }
+  }
 });

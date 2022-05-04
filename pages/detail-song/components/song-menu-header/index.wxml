@@ -1,0 +1,29 @@
+<wxs src="../../../../utils/format.wxs" module="format"></wxs>
+<view class="header">
+  <image class="bd-image" src="{{item.coverImgUrl}}" mode="aspectFill"></image>
+  <view class="content">
+    <view class="top">
+      <image class="cover" src="{{item.coverImgUrl}}" mode="aspectFill"></image>
+      <view class="info">
+        <view class="title">{{item.name}}</view>
+        <view class="author">
+          <image class="avatar" src="{{item.creator.avatarUrl}}" mode="aspectFill"></image>
+          <view class="nickname">{{item.creator.nickname}}</view>
+        </view>
+        <view class="label">
+          <view class="text" wx:for="{{item.tags}}" wx:key="*this">{{item}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="bottom">
+      <view class="fav">
+        <image class="icon" mode="widthFix" src="/assets/images/icons/favor_icon.png"></image>
+        <view class="text">{{format.formatCount(item.subscribedCount)}}</view>
+      </view>
+      <view class="share">
+        <image class="icon" mode="widthFix" src="/assets/images/icons/share_icon.png"></image>
+        <view class="text">分享</view>
+      </view>
+    </view>
+  </view>
+</view>

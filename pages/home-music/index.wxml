@@ -26,7 +26,11 @@
 </swiper>
 <!-- 推荐歌曲 -->
 <view class="recommend-song" wx:if="{{recommendSong.length}}">
-  <header title="推荐歌曲"/>
+  <header 
+    title="推荐歌曲" 
+    bind:clickRight="gotoDetailSong" 
+    data-ranking-data="{{hotRanking}}"
+  />
   <view>
     <block wx:for="{{recommendSong}}" wx:key="id">
       <song-item-v1 item="{{item}}"/>
@@ -43,8 +47,8 @@
 <view class="ranking" wx:if="{{showRanking}}">
   <header title="巅峰榜" showRight="{{false}}"/>
   <view class="ranking-list">
-    <ranking-item item="{{newRankingSlice}}"/>
-    <ranking-item item="{{soarRankingSlice}}"/>
-    <ranking-item item="{{originalRankingSlice}}"/>
+    <ranking-item bind:tap="gotoDetailSong" data-ranking-data="{{newRanking}}" item="{{newRankingSlice}}"/>
+    <ranking-item bind:tap="gotoDetailSong" data-ranking-data="{{soarRanking}}" item="{{soarRankingSlice}}"/>
+    <ranking-item bind:tap="gotoDetailSong" data-ranking-data="{{originalRanking}}" item="{{originalRankingSlice}}"/>
   </view>
 </view>

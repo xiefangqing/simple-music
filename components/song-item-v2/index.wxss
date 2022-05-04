@@ -1,0 +1,10 @@
+.item {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+.index {
+  width: 70rpx;
+  text-align: center;
+  margin-right: 20rpx;
+}

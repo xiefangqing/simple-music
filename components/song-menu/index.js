@@ -14,5 +14,12 @@ Component({
   data: {
     screenWidth: app.globalData.screenWidth
   },
-  methods: {}
+  methods: {
+    gotoDetailSong(e) {
+      const id = e.currentTarget.dataset.id
+      wx.navigateTo({
+        url: `/pages/detail-song/index?type=menu&id=${id}`
+      })
+    }
+  }
 });

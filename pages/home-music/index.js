@@ -21,11 +21,6 @@ Page({
   onLoad(options) {
     this.getPageData()
   },
-  gotoSearch() {
-    wx.navigateTo({
-      url: '/pages/detail-search/index'
-    })
-  },
   getPageData() {
     getBanner().then(res => {
       this.setData({ banners: res.banners })
@@ -55,6 +50,20 @@ Page({
           showRanking: count === rankingList.length
         })
       })
+    })
+  },
+  gotoSearch() {
+    wx.navigateTo({
+      url: '/pages/detail-search/index'
+    })
+  },
+  gotoDetailSong(e) {
+    const rankingData = e.currentTarget.dataset.rankingData
+    wx.navigateTo({
+      url: '/pages/detail-song/index?type=rank',
+      success(res) {
+        res.eventChannel.emit('acceptRankingData', { rankingData })
+      }
     })
   },
   // 当图片载入完毕时触发
