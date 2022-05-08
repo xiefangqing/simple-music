@@ -2,14 +2,6 @@ Page {
   padding: 0 20rpx;
 }
 
-.van-search {
-  padding: 10px 0 !important;  
-}
-
-.van-search__content {
-  background-color: #fff !important;
-}
-
 swiper {
   border-radius: 20rpx;
   overflow: hidden;  /* 必须加上，不然圆角显示不出来 */

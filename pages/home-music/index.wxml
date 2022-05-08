@@ -44,7 +44,7 @@
   songMenu="{{hotSongMenu}}"
 />
 <!-- 巅峰榜 -->
-<view class="ranking" wx:if="{{showRanking}}">
+<view class="ranking" wx:if="{{originalRankingSlice.tracks.length}}">
   <header title="巅峰榜" showRight="{{false}}"/>
   <view class="ranking-list">
     <ranking-item bind:tap="gotoDetailSong" data-ranking-data="{{newRanking}}" item="{{newRankingSlice}}"/>

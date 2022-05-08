@@ -1,0 +1,34 @@
+Page {
+  padding: 0 20rpx;
+  padding-top: 54px;  /* van-search的固定高度 */
+}
+.search {
+  position: fixed;
+  top: 0;
+  width: calc(100% - 40rpx);
+}
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tag {
+  padding: 20rpx;
+}
+.tag:nth-of-type(1) {
+  color: red;
+}
+.tag:nth-of-type(2) {
+  color: green;
+}
+.tag:nth-of-type(3) {
+  color: blue;
+}
+.suggest-title {
+  padding: 28rpx 0;
+  font-weight: bold;
+  font-size: 40rpx;
+}
+.suggest-list-item,
+.result-list-item {
+  padding: 20rpx;
+}

@@ -15,8 +15,7 @@ Page({
     originalRanking: {},
     newRankingSlice: {},
     soarRankingSlice: {},
-    originalRankingSlice: {},
-    showRanking: false
+    originalRankingSlice: {}
   },
   onLoad(options) {
     this.getPageData()
@@ -35,19 +34,16 @@ Page({
       { id: 19723756, key: 'soarRanking', slice2: 'soarRankingSlice' },
       { id: 2884035, key: 'originalRanking', slice2: 'originalRankingSlice' }
     ]
-    let count = 0
     rankingList.forEach(r => {
       getPlaylistDetail(r.id).then(res => {
         const data = res.playlist
-        count++
         this.setData({ 
           [r.key]: data,
           [r.slice]: data.tracks.slice(0, 6),
           [r.slice2]: {
             coverImgUrl: data.coverImgUrl,
             tracks: data.tracks.slice(0, 3)
-          },
-          showRanking: count === rankingList.length
+          }
         })
       })
     })
@@ -70,7 +66,7 @@ Page({
   swiperImageLoaded() {
     // 获取组件高度（节流处理）
     throttleGetComponentRect('.swiper-image').then(res => {
-      this.setData({ swiperHeight: res[0].height })
+      this.setData({ swiperHeight: res[0]?.height })
     })
   }
 })

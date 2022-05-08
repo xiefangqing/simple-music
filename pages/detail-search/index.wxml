@@ -1,1 +1,50 @@
-这是搜索页
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+<van-search
+  custom-class="search"
+  shape="round"
+  background="#fafafa"
+  maxlength="{{20}}"
+  value="{{value}}"
+  bind:change="valueChange"
+  bind:search="confirmSearch"
+/>
+<!-- 热门搜索 -->
+<view class="hot-search" wx:if="{{!value.length}}">
+  <header title="热门搜索" showRight="{{false}}"/>
+  <view class="keywords">
+    <view 
+      class="tag" 
+      wx:for="{{hotKeywords}}" 
+      wx:key="searchWord" 
+      bind:tap="clickKeyword" 
+      data-keyword="{{item.searchWord}}"
+    >{{item.searchWord}}</view>
+  </view>
+</view>
+<!-- 搜索建议 -->
+<view class="search-suggest" wx:elif="{{value.length && !searchResult.length}}">
+  <view class="suggest-title">搜索："{{value}}"</view>
+  <view class="suggest-list">
+    <block wx:if="{{suggestList.length}}">
+      <view
+        class="suggest-list-item"
+        wx:for="{{suggestList}}"
+        wx:key="keyword"
+        bind:tap="clickKeyword"
+        data-keyword="{{item.keyword}}"
+      >
+        <rich-text nodes="{{suggestAllNodes[index]}}"></rich-text>
+      </view>
+    </block>
+    <view wx:else>无建议</view>
+  </view>
+</view>
+<!-- 搜索结果 -->
+<view class="search-result" wx:else>
+  <header title="搜索结果" showRight="{{false}}"/>
+  <view class="result-list">
+    <view class="result-list-item" wx:for="{{searchResult}}" wx:key="id">
+      {{item.name}} - {{format.expandArtistsName(item.artists)}}
+    </view>
+  </view>
+</view>

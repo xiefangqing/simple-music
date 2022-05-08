@@ -1,4 +1,4 @@
-import request from '../../service/index'
+import request from '../index'
 
 export function getBanner() {
   return request.get('/banner', {

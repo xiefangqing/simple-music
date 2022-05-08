@@ -11,7 +11,7 @@
           <view class="nickname">{{item.creator.nickname}}</view>
         </view>
         <view class="label">
-          <view class="text" wx:for="{{item.tags}}" wx:key="*this">{{item}}</view>
+          <view class="label-text" wx:for="{{item.tags}}" wx:key="*this">{{item}}</view>
         </view>
       </view>
     </view>

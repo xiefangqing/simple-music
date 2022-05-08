@@ -20,3 +20,18 @@ export function throttle(callback, delay) {
     })
   }
 }
+
+// 支持返回promise的防抖函数
+export function debounce(callback, delay) {
+  let timer = null
+  return function () {
+    return new Promise(resolve => {
+      if (timer) {
+        clearTimeout(timer)
+      }
+      timer = setTimeout(_ => {
+        resolve(callback.apply(this, arguments))
+      }, delay)
+    })
+  }
+}

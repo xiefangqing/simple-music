@@ -56,7 +56,7 @@
   font-size: 28rpx;
   display: flex;
 }
-.label .text {
+.label-text {
   margin-right: 20rpx;
   color: black;
   background-color: white;
@@ -70,7 +70,7 @@
   justify-content: center;
   height: 100%;
 }
-.bottom .icon {
+.icon {
   display: block;
   width: 50rpx;
   margin-right: 20rpx;
