@@ -1,4 +1,4 @@
-<view class="item">
+<view class="item" bind:tap="gotoPlayer">
   <image class="image" src="{{item.al.picUrl}}"></image>
   <view class="content">
     <text class="name">{{item.name}}</text>

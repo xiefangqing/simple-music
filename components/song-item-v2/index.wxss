@@ -5,6 +5,16 @@
 }
 .index {
   width: 70rpx;
+  flex-shrink: 0; /* 不收缩 */
   text-align: center;
   margin-right: 20rpx;
+}
+.name {
+  /* 超两行截断显示省略号 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  word-break: break-all;
 }

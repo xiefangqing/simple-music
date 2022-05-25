@@ -32,3 +32,6 @@ Page {
 .result-list-item {
   padding: 20rpx;
 }
+.item {
+  height: auto !important;
+}

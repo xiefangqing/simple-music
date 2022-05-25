@@ -1,4 +1,7 @@
-<view class="item">
-  <view class="index">{{index}}</view>
-  <view class="name">{{item.name}}</view>
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+<view class="item" bind:tap="gotoPlayer">
+  <view class="index" wx:if="{{showIndex}}">{{index}}</view>
+  <view class="name">
+    {{item.name}} - {{format.expandArtistsName(item.artists)}}{{format.expandArtistsName(item.ar)}}
+  </view>
 </view>

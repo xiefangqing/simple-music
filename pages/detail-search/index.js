@@ -44,7 +44,7 @@ Page({
       return
     }
     debounceGetSearchSuggest(e.detail).then(res => {
-      const suggestList = res.result.allMatch
+      const suggestList = res.result.allMatch || []
       this.setData({ suggestList })
       // 匹配标红
       const keywords = suggestList?.map(s => s.keyword)

@@ -1,4 +1,3 @@
-<wxs src="../../utils/format.wxs" module="format"></wxs>
 <van-search
   custom-class="search"
   shape="round"
@@ -44,7 +43,7 @@
   <header title="搜索结果" showRight="{{false}}"/>
   <view class="result-list">
     <view class="result-list-item" wx:for="{{searchResult}}" wx:key="id">
-      {{item.name}} - {{format.expandArtistsName(item.artists)}}
+      <song-item-v2 item="{{item}}" showIndex="{{false}}"/>
     </view>
   </view>
 </view>

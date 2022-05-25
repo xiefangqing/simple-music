@@ -11,5 +11,12 @@ properties: {
 data: {
   authorName: ''
 },
-  methods: {}
+  methods: {
+    gotoPlayer() {
+      const id = this.properties.item.id
+      wx.navigateTo({
+        url: `/pages/player/index?id=${id}`
+      })
+    }
+  }
 });
