@@ -1,0 +1,31 @@
+Page {
+  padding: 0 20rpx;
+}
+.name {
+  text-align: center;
+}
+.time {
+  display: flex;
+  justify-content: space-between;
+}
+.control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.lyric {
+  height: 72vh;
+  margin: 20rpx 0;
+  font-size: 32rpx;
+  text-align: center;
+}
+.lyric-item {
+  /*line-height: 1.5em;*/
+  height: 24px; /* 这的高度就等于每次滚动的距离 */
+}
+.lyric-item.active {
+  font-weight: bold;
+  color: green;
+  font-size: 36rpx;
+}
